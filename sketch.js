@@ -11,7 +11,7 @@ var gameState = "Onsling";
 bg = "sprites/bg.png";
 
 function preload() {
-    backgroundImg = loadImage("sprites/bg.png");
+    3
     getTime();
 }
 
@@ -48,7 +48,8 @@ function setup(){
 }
 
 function draw(){
-    background(backgroundImg);
+    if(backgroundImg)
+        background(backgroundImg);
     Engine.update(engine);
     //strokeWeight(4);
     box1.display();
@@ -95,7 +96,6 @@ async function getTime(){   //asynchronous function
     //console.log(response);
 
     var responseJSON = await response.json(); //extracts the data in JSON
-    console.log(responseJSON);
 
     var dt = responseJSON.datetime;
 
