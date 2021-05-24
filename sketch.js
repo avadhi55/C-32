@@ -11,7 +11,6 @@ var gameState = "Onsling";
 bg = "sprites/bg.png";
 
 function preload() {
-    3
     getTime();
 }
 
@@ -48,8 +47,7 @@ function setup(){
 }
 
 function draw(){
-    if(backgroundImg)
-        background(backgroundImg);
+    background(backgroundImg);
     Engine.update(engine);
     //strokeWeight(4);
     box1.display();
